@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 
 
 fs.appendFileSync('./routes/index.js', 'apiUrl = "'+process.env.api+'";');
-console.log(process.env.api)//set api url de
+console.log(process.env.api)//set api url de tetik
 console.log(process.env)  
 const port = 8080
 
