@@ -1,0 +1,96 @@
+
+body {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #222;
+    background: #f8f8f8;
+    font-weight: 400;
+    font-family: Poppins; }
+#add{
+    margin-left: 25%;
+}
+#list{
+    margin-left: 30%;
+}
+
+button{
+    border-radius: 12px;
+    background-color: bisque;
+    font-size: 20px;
+}
+input {
+    border-radius: 12px;
+    font-size: 26px;
+    size: 20px;
+}
+
+[type=checkbox]{
+    border-radius: 12px;
+    font-size: 26px;
+    size: 20px;
+    width: 25px;
+    height: 25px;
+}
+  #container {
+    margin-left: 30%;
+    width: 900px;
+    background: aquamarine;
+    margin: 0 auto;
+    box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    -o-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -o-border-radius: 20px;
+    -ms-border-radius: 20px; }
+  
+  .display-flex {
+    justify-content: space-between;
+    -moz-justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -o-justify-content: space-between;
+    -ms-justify-content: space-between;
+    align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center; }
+  
+  .display-flex-center {
+    justify-content: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -o-justify-content: center;
+    -ms-justify-content: center;
+    align-items: center;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -o-align-items: center;
+    -ms-align-items: center; }
+  
+  .position-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%); }
+
+    .container input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
+    
+      input[type=checkbox]:checked {
+        background: url(http://ramyasspace.files.wordpress.com/2011/06/tick.jpg);
+        background-size: 100%;
+        width: 25px;
+        height: 25px;
+    }
+    
+    
+    
