@@ -20,7 +20,7 @@ its required google chrome.
 Then set api adress env file (or set environment variables )
 you can run npm test to test the application.
 
-for debuggin better delete /test/index.test.ts  line 21  otherwise chrome run without any window
+for debuggin better delete /test/index.test.ts  line 74  otherwise chrome run without any window
 
 Docker 
 

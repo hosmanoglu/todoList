@@ -69,12 +69,10 @@ describe('src', function () {
 
 describe('ekle check sil', () => {
 
-  before(done => {
-    driver = new webdriver.Builder().forBrowser('chrome')
-      //.setChromeOptions(new chrome.Options().headless())
-      .setChromeOptions(ChromeOptions)
+  before( async () => {
+    driver = await new webdriver.Builder().forBrowser('chrome')
+      //.setChromeOptions(ChromeOptions) //for debug tests comment this line
       .build()
-      then(done())
   });
 
   let testText = "denemewasasqqwsswewwweqw"
