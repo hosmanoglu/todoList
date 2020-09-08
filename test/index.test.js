@@ -58,7 +58,6 @@ describe('src', function () {
       .set('content-type', 'src/jquery-3.5.1.min.js')
       .end((error, response) => {
         response.should.have.status(200);
-        console.log("jquery ok")
         done()
       })
   });
@@ -67,9 +66,9 @@ describe('src', function () {
 
 
 
-describe('ekle check sil', () => {
-
-  before( async () => {
+describe('ekle check sil',function ()  {
+  this.timeout(500000); 
+  before(async () => {
     driver = await new webdriver.Builder().forBrowser('chrome')
       .setChromeOptions(ChromeOptions) //for debug tests comment this line
       .build()
@@ -96,10 +95,10 @@ describe('ekle check sil', () => {
             var checkboxVal = await driver.findElement(By.css('[id="list"]>div>[value="' + testText + '"]+[type="checkbox"]')).getAttribute("checked")
             expect(checkboxVal).to.equal("true");// check checkbox
 
-            await driver.findElement(By.css('[id="list"]>div>[value="' + testText + '"]+[type="checkbox"]+[type="button"]')).click()
-
+            driver.findElement(By.css('[id="list"]>div>[value="' + testText + '"]+[type="checkbox"]+[type="button"]')).click()
+            await driver.wait(until.stalenessOf(driver.findElement(By.css('[id="list"]>div>[value="' + testText + '"]'))))
             var list = await driver.findElement(By.css('[id="list"]')).getAttribute("innerHTML")
-            expect(button).to.not.include(testText)// click delete button then check list not include the test
+            expect(list).to.not.include(testText)// click delete button then check list not include the test
 
             await driver.quit();
             done();
