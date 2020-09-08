@@ -74,7 +74,7 @@ describe('ekle check sil',function ()  {
       .build()
   });
 
-  let testText = "denemewasasqqwsswewwweqw"
+  let testText = Date.now().toString()
   it('ekle check sil', done => {
     driver.get('http://localhost:8080').then(function (res) {
       driver
