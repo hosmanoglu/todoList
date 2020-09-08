@@ -71,7 +71,7 @@ describe('ekle check sil', () => {
 
   before( async () => {
     driver = await new webdriver.Builder().forBrowser('chrome')
-      //.setChromeOptions(ChromeOptions) //for debug tests comment this line
+      .setChromeOptions(ChromeOptions) //for debug tests comment this line
       .build()
   });
 
