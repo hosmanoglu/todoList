@@ -98,7 +98,7 @@ describe('ekle check sil',function ()  {
             driver.findElement(By.css('[id="list"]>div>[value="' + testText + '"]+[type="checkbox"]+[type="button"]')).click()
             await driver.wait(until.stalenessOf(driver.findElement(By.css('[id="list"]>div>[value="' + testText + '"]'))))
             var list = await driver.findElement(By.css('[id="list"]')).getAttribute("innerHTML")
-            expect(list).to.not.include(testText)// click delete button then check list not include the test
+            expect(list).to.not.include(testText)// click delete button then check list not include the   test
 
             await driver.quit();
             done();
