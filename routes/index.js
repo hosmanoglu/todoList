@@ -1,5 +1,6 @@
 var apiUrl="http://localhost:4400"
 function addWork() {
+    //add work
     if ($("#add-text").val() !== "") {
         $.ajax({
             type: "POST",
@@ -16,14 +17,11 @@ function addWork() {
                 console.log('Handle rejected promise (' + reason + ') here.');
             });
     }
-    // $("#list").append("<div>"+
-    // "<input type='text' readonly value='"+$("#add-text").val()+"'/>"+
-    // "<input type='checkbox' onChange='check()' />"+
-    // "<button type='button' onClick='del()' />"+
-    //  "</div>")
+    
 }
 
 function check(element,id) {
+    //check checkbox
     $.ajax({
         type: "POST",
         url: apiUrl+"/editList",
@@ -40,6 +38,7 @@ function check(element,id) {
 }
 
 function del(id) {
+    //del line
     $.ajax({
         type: "POST",
         url: apiUrl+"/delList",
@@ -60,21 +59,18 @@ function renderList(arr) {
     for (let index = 0; index < arr.length; index++) {
 
         $("#list").append("<div id='" + index + "'>" +
-            "<input type='text' readonly value='" + arr[index].text + "'>" +
+            "<input type='text' readonly value='" + arr[index].text + "' onClick='textClick(this)' >" +
             "<input type='checkbox' onChange='check(this,"+index+")' "+((arr[index].checked) ? "checked" : '') +"  />" +
             "<button type='button' onClick='del(" + index + ")' text='delete' />delete" +
             "</div>")
-
-        //      $("#list").append("<div>"+
-        //  "<input type='text' readonly value='"+$("#add-text").val()+"'/>"+
-        //  "<input type='checkbox' onChange='check()' />"+
-        //  "<button type='button' onClick='del()' />"+
-        //   "</div>")
     }
+}
+function textClick(element) {
+    element.nextElementSibling.click()
 }
 
 $( document ).ready(function() {
-    $.ajax({
+    $.ajax({//getList
         type: "GET",
         url: apiUrl+"/getList",
         contentType: 'application/json',

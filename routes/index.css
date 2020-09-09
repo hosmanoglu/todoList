@@ -10,7 +10,7 @@ body {
     margin-left: 25%;
 }
 #list{
-    margin-left: 30%;
+    margin-left: 27%;
 }
 
 button{
@@ -34,7 +34,7 @@ input {
   #container {
     margin-left: 30%;
     width: 900px;
-    background: aquamarine;
+    background: #1ecff7;
     margin: 0 auto;
     box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
     -moz-box-shadow: 0px 15px 16.83px 0.17px rgba(0, 0, 0, 0.05);
@@ -83,6 +83,7 @@ input {
 
     .container input:checked ~ .checkmark {
         background-color: #2196F3;
+        border-radius: 12px;
       }
     
       input[type=checkbox]:checked {
@@ -90,6 +91,7 @@ input {
         background-size: 100%;
         width: 25px;
         height: 25px;
+        border-radius: 12px;
     }
     
     
